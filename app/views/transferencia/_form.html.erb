@@ -1,0 +1,45 @@
+<%= form_for(@transferencium) do |f| %>
+  <% if @transferencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transferencium.errors.count, "error") %> prohibited this transferencium from being saved:</h2>
+
+      <ul>
+      <% @transferencium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo_alfa_numerico %><br>
+    <%= f.text_field :codigo_alfa_numerico %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.number_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :estorno %><br>
+    <%= f.check_box :estorno %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_estorno %><br>
+    <%= f.text_field :codigo_estorno %>
+  </div>
+  <div class="field">
+    <%= f.label :conta_debitada_saldo %><br>
+    <%= f.text_field :conta_debitada_saldo %>
+  </div>
+  <div class="field">
+    <%= f.label :conta_creditada_saldo %><br>
+    <%= f.text_field :conta_creditada_saldo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

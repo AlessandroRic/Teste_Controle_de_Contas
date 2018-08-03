@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome fantasia:</strong>
+  <%= @pessoa_juridica.nome_fantasia %>
+</p>
+
+<p>
+  <strong>Razao social:</strong>
+  <%= @pessoa_juridica.razao_social %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @pessoa_juridica.cnpj %>
+</p>
+
+<%= link_to 'Edit', edit_pessoa_juridica_path(@pessoa_juridica) %> |
+<%= link_to 'Back', pessoa_juridicas_path %>

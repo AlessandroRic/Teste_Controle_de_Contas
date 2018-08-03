@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pessoa Fisicas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Data de nascimento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pessoa_fisicas.each do |pessoa_fisica| %>
+      <tr>
+        <td><%= pessoa_fisica.nome %></td>
+        <td><%= pessoa_fisica.cpf %></td>
+        <td><%= pessoa_fisica.data_de_nascimento %></td>
+        <td><%= link_to 'Show', pessoa_fisica %></td>
+        <td><%= link_to 'Edit', edit_pessoa_fisica_path(pessoa_fisica) %></td>
+        <td><%= link_to 'Destroy', pessoa_fisica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pessoa fisica', new_pessoa_fisica_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo alfa numerico:</strong>
+  <%= @transferencium.codigo_alfa_numerico %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @transferencium.tipo %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @transferencium.valor %>
+</p>
+
+<p>
+  <strong>Estorno:</strong>
+  <%= @transferencium.estorno %>
+</p>
+
+<p>
+  <strong>Codigo estorno:</strong>
+  <%= @transferencium.codigo_estorno %>
+</p>
+
+<p>
+  <strong>Conta debitada saldo:</strong>
+  <%= @transferencium.conta_debitada_saldo %>
+</p>
+
+<p>
+  <strong>Conta creditada saldo:</strong>
+  <%= @transferencium.conta_creditada_saldo %>
+</p>
+
+<%= link_to 'Edit', edit_transferencium_path(@transferencium) %> |
+<%= link_to 'Back', transferencia_path %>

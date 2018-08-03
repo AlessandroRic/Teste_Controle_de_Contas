@@ -1,0 +1,29 @@
+<%= form_for(@contum) do |f| %>
+  <% if @contum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contum.errors.count, "error") %> prohibited this contum from being saved:</h2>
+
+      <ul>
+      <% @contum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :saldo %><br>
+    <%= f.text_field :saldo %>
+  </div>
+  <div class="field">
+    <%= f.label :situacao %><br>
+    <%= f.number_field :situacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
